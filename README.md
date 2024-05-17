@@ -1,1 +1,5 @@
-# zjui-inidividual-report
+# ZJUI Senior Design Individual Report Template
+
+用于ZJUI毕业设计（论文）的模板，基于学院模板、UIUC ECE 445 Final Report模板和浙江大学毕业论文模板改写。
+
+反馈：giant@zju.edu.cn
