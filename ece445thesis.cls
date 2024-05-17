@@ -64,21 +64,27 @@
 
 % Chapter/section/subsection title format
 \titleformat{\chapter}
-{\fontsize{16pt}{\baselineskip}\selectfont\bfseries}
+{\fontsize{15pt}{\baselineskip}\selectfont\bfseries}
 {\thechapter}{1em}{}
-\titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
+\titlespacing{\chapter}{0pt}{0pt}{5.5pt}
 
 \titleformat{\section}
-{\fontsize{14pt}{\baselineskip}\selectfont\bfseries}
+{\fontsize{13pt}{\baselineskip}\selectfont\bfseries}
 {\thesection}{1em}{}
+\titlespacing{\section}{0pt}{5.5pt}{5.5pt}
 
 \titleformat{\subsection}
 {\normalsize\bfseries}
 {\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{5.5pt}{5.5pt}
 
 \titleformat{\subsubsection}
-{\normalsize\bfseries}
+{\normalsize}
 {\thesubsubsection}{1em}{}
+\titlespacing{\subsubsection}{0pt}{5.5pt}{5.5pt}
+
+\setlength{\parskip}{0pt}
+\setcounter{secnumdepth}{3}
 
 % Enumerate list format
 \setenumerate[1]{
@@ -128,15 +134,6 @@
 \newcommand\projectnumber[1]{\def\PROJECTNUMBER{#1}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.1mm}}
-\newcommand\nameemail[3]{
-  {#1~\textsc{#2}}\\%name
-  \href{mailto:#3}{#3}%Email
-}
-\newcommand\nameid[3]{
-{#1~\textsc{#2}}\\%name
-{#3}%Student ID
-}
-\newcommand\name[2]{#1~\textsc{#2}}
 \def\RPTTYPE{ZJUI Senior Design Project}
 \def\RPTTITLE{~}
 \def\RPTDATE{~}
