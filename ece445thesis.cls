@@ -1,22 +1,8 @@
-%% ece445.cls
-%% Copyright 2023 Tiantian Zhong
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   https://www.latex-project.org/lppl.txt
-% and version 1.3c or later is part of all distributions of LaTeX
-% version 2008 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
-% 
-% The Current Maintainer of this work is Tiantian Zhong.
-%
-% This work consists of the files senior-design.cls.
+%% ece445thesis.cls
+%% ZJUI ECE 445 Individual Report Template
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ece445thesis}[2024-01-15 by Martin Zhong (zhongmartin@outlook.com) Template for ZJUI ECE 445 Individual Reports]
+\ProvidesClass{ece445thesis}[2024-05-17 by Martin Zhong (giant@zju.edu.cn) ZJUI ECE 445 Individual Report Template]
 
 \LoadClass[a4paper,11pt,oneside]{book}
 
@@ -47,7 +33,8 @@
   {\printdate}}
 
 \RequirePackage{fontspec}
-\RequirePackage[scheme=plain, fontset=fandol]{ctex}\defaultfontfeatures{}
+\RequirePackage[scheme=plain, fontset=fandol]{ctex}\defaultfontfeatures{} % for Chinese support
+\usepackage{newtxtext, newtxmath} % Times font
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
 \RequirePackage{hyperref}
@@ -55,9 +42,12 @@
 \RequirePackage{setspace}
 \RequirePackage{afterpage}
 \RequirePackage[per-mode=symbol,inter-unit-product = \ensuremath{{}\cdot{}},mode=math]{siunitx}
-\RequirePackage[section]{placeins} % 阻止浮动体飘到所属subsection之后
+\RequirePackage[section]{placeins} % block the floating objects to the current section
 \DeclareSIPrefix\micro{\text{\textmu}}{-3} % typing SI Units, not necessary for default LMC font
 \onehalfspacing
+
+\RequirePackage{pdfpages} % for including pdf files
+\includepdfset{{pagecommand={\thispagestyle{fancy}}}}
 
 % Font settings
 \renewcommand*{\UrlFont}{\rmfamily}
@@ -96,7 +86,6 @@
 \setlength{\parindent}{2em}
 \setlength{\headheight}{14pt}
 \renewcommand{\headrulewidth}{0.5pt}
-% \renewcommand{\chaptermark}[1]{\markboth{\thechapter.~#1}{}}
 
 \newcommand\setninept{\fontsize{9pt}{\baselineskip}\selectfont}
 \pagestyle{fancy}\fancyhf{}
@@ -129,11 +118,12 @@
 \newcommand\semester[1]{\def\SEMESTER{#1}}
 \newcommand\grade[1]{\def\GRADE{#1}}
 \newcommand\major[1]{\def\MAJOR{#1}}
-\newcommand\sponsor[1]{\def\FACULTYNAME{#1}}
+\newcommand\supervisor[1]{\def\FACULTYNAME{#1}}
 \newcommand\ta[1]{\def\TANAME{#1}}
 \newcommand\projectnumber[1]{\def\PROJECTNUMBER{#1}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.1mm}}
+
 \def\RPTTYPE{ZJUI Senior Design Project}
 \def\RPTTITLE{~}
 \def\RPTDATE{~}
@@ -145,3 +135,4 @@
 \def\PROJECTNUMBER{~}
 \def\MAJOR{~}
 \def\GRADE{~}
+\def\PROJNBR{~}

@@ -1,23 +1,26 @@
+%% individual_thesis.tex
+%% ZJUI Senior Design Individual Report
+
 \documentclass{ece445thesis}
 \usepackage{subfiles}
-\usepackage{pdfpages}
-\includepdfset{{pagecommand={\thispagestyle{fancy}}}}
 
-%%% Fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{newtxtext, newtxmath} % Times
 %%% Report information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%TODO: 在这里填写信息
-\reporttitle{Title}
-\authorname{Name}
-\studentid{Student ID}
+%TODO: Fill project info here
 \semester{Spring 2024}
-\grade{2020}
-\major{专业}
-\sponsor{导师}
+\reporttitle{Title}
+\projectnumber{xx}
+\supervisor{Supervisor}
 \ta{TA}
 \reportdate{May 27, 2024}
+
+%TODO: Fill personal info here
+\authorname{Name}
+\studentid{Student ID}
+\grade{Year of admission}
+\major{Major}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\addbibresource{thesis.bib}  % bib数据库
+\addbibresource{thesis.bib}  % bib database
 \begin{document}
 \subfile{frontmatter/cover.tex}
 ~\clearpage
@@ -27,24 +30,19 @@
 \includepdf{frontmatter/statement.pdf}
 \cleardoublepage
 %%% Acknowledgement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Acknowledgement}
-% TODO: 这里放致谢
+% TODO: Acknowledgement here
+\subfile{body/0-acknowledgement.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Abstract}
-% TODO: 这里放摘要
+% TODO: Abstract here
+\subfile{body/0-abstract.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% TOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\tableofcontents\markboth{Contents}{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
 \mainmatter\pagestyle{fancy}
 %%% Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% TODO: 以下是正文
-\chapter{Introduction}
-Good good study \cite{John2024}, day day up.
-\chapter{Design}
-\chapter{Verification}
-\chapter{Conclusion}
+% TODO: Main body starts here
+\subfile{body/1-introduction.tex}
+% \subfile{...}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{\chapter}
 {\fontsize{16pt}{\baselineskip}\selectfont\bfseries}
@@ -52,14 +50,8 @@ Good good study \cite{John2024}, day day up.
 \titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
 \begin{appendices}
     %%% Appendices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % TODO 这里放附录
-    % TODO 这里放附录
-    % TODO 这里放附录
-    % TODO 这里放附录
-    % TODO 这里放附录
-    % TODO 这里放附录
-    % TODO 这里放附录
-    % TODO 这里放附录
+    % TODO: Appendices here
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{appendices}
 \titleformat{\chapter}
@@ -69,16 +61,11 @@ Good good study \cite{John2024}, day day up.
 \clearpage
 \backmatter
 \renewcommand*{\UrlFont}{\rmfamily}
-\printbibliography[title={References},heading=bibintoc]
-\clearpage
+\printbibliography[title={References},heading=bibintoc]\clearpage
+\includepdf[pages={1}]{backmatter/resume.pdf}\clearpage
 
-\includepdf[pages={1}]{backmatter/resume.pdf}
-\cleardoublepage
+\includepdf[pages={1}]{backmatter/task_assignment.pdf}\clearpage
 
-\includepdf[pages={1}]{backmatter/task_assignment.pdf}
-\cleardoublepage
-
-\includepdf[pages={1}]{backmatter/assessment_form.pdf}
-\clearpage
+\includepdf[pages={1}]{backmatter/assessment_form.pdf}\clearpage
 
 \end{document}
