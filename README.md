@@ -4,8 +4,8 @@
 
 编译命令：
 
-'''
+```
 latexmk -xelatex -synctex=1 -interaction=nonstopmode individual_thesis.tex
-'''
+```
 
 反馈：giant@zju.edu.cn
