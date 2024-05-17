@@ -1,0 +1,40 @@
+% cover.tex
+\documentclass[../individual_thesis.tex]{subfiles}
+
+\begin{document}
+% Coverpage
+\begin{titlepage}
+    \newgeometry{left=1cm, right=1cm, top=1in, bottom=1in}
+    \begin{center}
+        ~~\\ % to make the vspace effective
+        \vspace{1.5cm}
+        {\fontsize{16}{24}\selectfont Zhejiang University / University of Illinois at Urbana-Champaign Institute}\\
+        \vspace{1.88cm}
+        {\fontsize{28}{42}\selectfont Senior Design Individual Report}\\
+        \vspace{1.6cm}
+        \begin{minipage}{15.92cm}
+            \centering
+            \fontsize{26}{26}\selectfont
+            \MakeUppercase{\bf \RPTTITLE}
+        \end{minipage}\\[2cm]
+        {\fontsize{14}{21}\selectfont By}\\[1.5em]
+        {\fontsize{14}{21}\selectfont Author Name: \AUTHORNAME}\\
+        {\fontsize{14}{21}\selectfont Student ID: \STUDENTID}
+
+        \vfill
+        {\fontsize{12}{\baselineskip}\selectfont Individual Report for Senior Design, Spring 2024\\
+            Major: \MAJOR \\
+            Grade: \GRADE \\
+            Supervisor: \FACULTYNAME \\
+            TA:~ \TANAME\\
+            \vfill}
+        {\fontsize{12}{18}\selectfont\RPTDATE\\
+            Project No. 19}
+    \end{center}
+    \vspace{2cm}
+    ~
+    \restoregeometry
+\end{titlepage}
+\thispagestyle{empty}
+
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass{ece445thesis}
+\usepackage{subfiles}
+\usepackage{pdfpages}
+\includepdfset{{pagecommand={\thispagestyle{fancy}}}}
+
+%%% Fonts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setCJKmainfont[AutoFakeBold=true, AutoFakeSlant=true]{SimSun}
+\setmonofont[Scale=MatchLowercase]{Consolas}
+\setsansfont{Arial}
+\usepackage{newtxtext, newtxmath} % Times
+%%% Report information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO: 在这里填写信息
+\reporttitle{Title}
+\authorname{Name}
+\studentid{Student ID}
+\semester{Spring 2024}
+\grade{2020}
+\major{专业}
+\sponsor{导师}
+\ta{TA}
+\reportdate{May 27, 2024}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addbibresource{thesis.bib}  % bib数据库
+\begin{document}
+\subfile{frontmatter/cover.tex}
+~\clearpage
+\frontmatter
+\includepdf{frontmatter/checklist.pdf}
+\cleardoublepage
+\includepdf{frontmatter/statement.pdf}
+\cleardoublepage
+%%% Acknowledgement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Acknowledgement}
+% TODO: 这里放致谢
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Abstract}
+% TODO: 这里放摘要
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TOC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents\markboth{Contents}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter\pagestyle{fancy}
+%%% Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO: 以下是正文
+\chapter{Introduction}
+Good good study \cite{John2024}, day day up.
+\chapter{Design}
+\chapter{Verification}
+\chapter{Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{\chapter}
+{\fontsize{16pt}{\baselineskip}\selectfont\bfseries}
+{Appendix \thechapter}{1em}{}
+\titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
+\begin{appendices}
+    %%% Appendices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % TODO 这里放附录
+    % TODO 这里放附录
+    % TODO 这里放附录
+    % TODO 这里放附录
+    % TODO 这里放附录
+    % TODO 这里放附录
+    % TODO 这里放附录
+    % TODO 这里放附录
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{appendices}
+\titleformat{\chapter}
+{\fontsize{16pt}{\baselineskip}\selectfont\bfseries}
+{\thechapter}{1em}{}
+\titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
+\clearpage
+\backmatter
+\renewcommand*{\UrlFont}{\rmfamily}
+\printbibliography[title={References},heading=bibintoc]
+\clearpage
+
+\includepdf[pages={1}]{backmatter/resume.pdf}
+\cleardoublepage
+
+\includepdf[pages={1}]{backmatter/task_assignment.pdf}
+\cleardoublepage
+
+\includepdf[pages={1}]{backmatter/assessment_form.pdf}
+\clearpage
+
+\end{document}
