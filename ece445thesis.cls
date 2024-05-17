@@ -61,9 +61,6 @@
 
 % Font settings
 \renewcommand*{\UrlFont}{\rmfamily}
-\newfontfamily{\cambria}{Cambria}
-\newfontfamily{\calibri}{Calibri}
-\newfontfamily{\arial}{Arial}
 
 % Chapter/section/subsection title format
 \titleformat{\chapter}
