@@ -12,7 +12,7 @@
 \RequirePackage{indentfirst}
 \RequirePackage{fancyhdr}
 \RequirePackage{graphicx}
-\RequirePackage[format=hang,font={small},labelfont={bf},labelsep={quad}]{caption}
+\RequirePackage[format=hang,font={small},labelfont={bf},labelsep={quad},skip=5.5pt]{caption}
 \RequirePackage{amsmath, amssymb, amsfonts}  % for math spacing
 \RequirePackage[margin=1in]{geometry} % page layout 1' margin
 \RequirePackage{enumitem}
@@ -56,7 +56,7 @@
 \titleformat{\chapter}
 {\fontsize{15pt}{\baselineskip}\selectfont\bfseries}
 {\thechapter}{1em}{}
-\titlespacing{\chapter}{0pt}{0pt}{5.5pt}
+\titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
 
 \titleformat{\section}
 {\fontsize{13pt}{\baselineskip}\selectfont\bfseries}
