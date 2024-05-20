@@ -120,7 +120,7 @@
 \newcommand\major[1]{\def\MAJOR{#1}}
 \newcommand\supervisor[1]{\def\FACULTYNAME{#1}}
 \newcommand\ta[1]{\def\TANAME{#1}}
-\newcommand\projectnumber[1]{\def\PROJECTNUMBER{#1}}
+\newcommand\projectnumber[1]{\def\PROJNBR{#1}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.1mm}}
 
