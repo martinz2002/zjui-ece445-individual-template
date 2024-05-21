@@ -22,12 +22,9 @@
 \addbibresource{thesis.bib}  % bib database
 \begin{document}
 \subfile{frontmatter/cover.tex}
-~\clearpage
 \frontmatter
 \includepdf{frontmatter/checklist.pdf}
-\clearpage
 \includepdf{frontmatter/statement.pdf}
-\clearpage
 %%% Acknowledgement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Acknowledgement here
 \subfile{body/0-acknowledgement.tex}
@@ -37,12 +34,15 @@
 \subfile{body/0-abstract.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \tableofcontents
-\mainmatter\pagestyle{fancy}
+\mainmatter
 %%% Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Main body starts here
 \subfile{body/1-introduction.tex}
+\subfile{body/2-design.tex}
 % \subfile{...}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand*{\UrlFont}{\rmfamily}
+\printbibliography[title={References},heading=bibintoc]
 \titleformat{\chapter}
 {\fontsize{15pt}{\baselineskip}\selectfont\bfseries}
 {Appendix \thechapter}{1em}{}
@@ -50,21 +50,16 @@
 \begin{appendices}
     %%% Appendices %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % TODO: Appendices here
-
+    \chapter{Sample Appendix Chapter}
+    % \chapter{...}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{appendices}
 \titleformat{\chapter}
 {\fontsize{15pt}{\baselineskip}\selectfont\bfseries}
 {\thechapter}{1em}{}
 \titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
-\clearpage
 \backmatter
-\renewcommand*{\UrlFont}{\rmfamily}
-\printbibliography[title={References},heading=bibintoc]\clearpage
-\includepdf[pages={1}]{backmatter/resume.pdf}\clearpage
-
-\includepdf[pages={1}]{backmatter/task_assignment.pdf}\clearpage
-
-\includepdf[pages={1}]{backmatter/assessment_form.pdf}\clearpage
-
+\includepdf[pages={1}]{backmatter/resume.pdf}
+\includepdf[pages={1}]{backmatter/task_assignment.pdf}
+\includepdf[pages={1}]{backmatter/assessment_form.pdf}
 \end{document}

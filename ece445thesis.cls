@@ -4,7 +4,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ece445thesis}[2024-05-17 by Martin Zhong (giant@zju.edu.cn) ZJUI ECE 445 Individual Report Template]
 
-\LoadClass[a4paper,11pt,oneside]{book}
+\LoadClass[a4paper,11pt,twoside]{book}
 
 \RequirePackage{booktabs}
 \RequirePackage{tabularx}
@@ -45,6 +45,13 @@
 \RequirePackage[section]{placeins} % block the floating objects to the current section
 \DeclareSIPrefix\micro{\text{\textmu}}{-3} % typing SI Units, not necessary for default LMC font
 \onehalfspacing
+
+\RequirePackage{xpatch}
+\makeatletter
+\xpatchcmd{\chapter}
+  {\if@openright\cleardoublepage\else\clearpage\fi}{\clearpage}
+  {}{}
+\makeatother
 
 \RequirePackage{pdfpages} % for including pdf files
 \includepdfset{{pagecommand={\thispagestyle{fancy}}}}
@@ -90,7 +97,8 @@
 \newcommand\setninept{\fontsize{9pt}{\baselineskip}\selectfont}
 \pagestyle{fancy}\fancyhf{}
 \def\setfancyheadfoot{
-  \fancyhead[L]{ZJUI Senior Design Project}
+  \fancyhead[LE]{ZJUI Senior Design Project}
+  \fancyhead[RO]{\RPTTITLE}
   \fancyfoot[C]{\thepage}
 }
 
@@ -136,3 +144,4 @@
 \def\MAJOR{~}
 \def\GRADE{~}
 \def\PROJNBR{~}
+
