@@ -9,15 +9,23 @@
 
 **由于使用了依赖`fontspec`的宏包用于设置字体，请务必使用XeLaTeX或LuaLaTeX编译文档，否则会报错！**
 
+## 编译PDF
+**务必使用XeLaTeX或LuaLaTeX！！！**
+### 本地编译
 编译命令：
 
 ```
 latexmk -xelatex -interaction=nonstopmode individual_thesis.tex
 ```
 
+### Overleaf
+访问[Overleaf模板](https://www.overleaf.com/read/zjbkmrtykhts#10b467)。
+
+注意：以上Overleaf链接指向的模板可能并非为最新。
+
 ## FAQ
 1. 如果Overleaf显示编译超时怎么办？
-> 第一次打开这个模板时，先使用Fast Mode编译，之后再使用Normal正常编译。
+> 第一次打开这个模板时，先使用Fast Mode编译，之后再使用Normal正常编译。如果实在难以解决，尝试注释掉主文件中所有的`includepdf`命令再编译。（注释掉`includepdf`命令会导致存放于frontmatter, backmatter文件夹内的论文必要附加文件无法被编入文档，可以使用Acrobat等软件手工导入）
 
 2. Overleaf编译报错，提示fontspec包必须使用XeTeX怎么办？
 > 点击Overleaf左上角的Menu，将编译引擎由pdfLaTeX改为XeLaTeX。
