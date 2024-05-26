@@ -24,7 +24,9 @@
 \subfile{frontmatter/cover.tex}
 \frontmatter
 \includepdf{frontmatter/checklist.pdf}
+\cleardoublepage
 \includepdf{frontmatter/statement.pdf}
+\cleardoublepage
 %%% Acknowledgement %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO: Acknowledgement here
 \subfile{body/0-acknowledgement.tex}
@@ -60,6 +62,8 @@
 \titlespacing{\chapter}{0pt}{0pt}{\baselineskip}
 \backmatter
 \includepdf[pages={1}]{backmatter/resume.pdf}
+\cleardoublepage
 \includepdf[pages={1}]{backmatter/task_assignment.pdf}
+\cleardoublepage
 \includepdf[pages={1}]{backmatter/assessment_form.pdf}
 \end{document}
